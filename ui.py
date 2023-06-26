@@ -58,6 +58,10 @@ def home():
         if event == 'PROSES':
             output = predict(values)
             window['OUTPUT'].update(' '.join(['PPKM Level', str(int(output))]))
+        if event == 'RESET':
+            for x in ['NEW_CASE', 'HOSPITALIZATION_RATE', 'MORTALITY', 'TESTING', 'TRACING_RATIO', 'BED_OCCOPANCY_RATE', 'VAKSIN_UMUM', 'VAKSIN_LANSIA']:
+                window[x].update('')
+            window['OUTPUT'].update(' '.join(['PPKM Level', '']))
 
     window.close()
 
