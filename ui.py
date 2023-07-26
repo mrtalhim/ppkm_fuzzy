@@ -46,10 +46,11 @@ def home():
         [sg.Text('PPKM Level: ', key='OUTPUT', font='Courier 12')],
         [
             sg.Button('Proses', key='PROSES', font='Courier 12'),
-            sg.Button('Reset', key='RESET', font='Courier 12')]
+            sg.Button('Reset', key='RESET', font='Courier 12')
+        ]
     ]
     
-    window = sg.Window('FIS PPKM', layout, element_justification='left')
+    window = sg.Window('FIS PPKM', layout, element_justification='center')
 
     while True:
         event, values = window.read()
